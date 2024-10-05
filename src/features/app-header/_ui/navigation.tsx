@@ -22,10 +22,10 @@ export function Navigation() {
             <nav className="flex flex-col  items-center gap-2 text-xl ">
               <Link href="/">Главная</Link>
               <Link href="/about">О нас</Link>
-              <Link href="/contacts">Контакты</Link>
-              <Link href="/faq">FAQ</Link>
-              <Link href="/catalog">Каталог</Link>
-              <Link href="/blog">Блог</Link>
+              <Link href="/">Контакты</Link>
+              <Link href="/">FAQ</Link>
+              <Link href="/">Каталог</Link>
+              <Link href="/">Блог</Link>
             </nav>
           </SheetContent>
         </Sheet>
@@ -35,10 +35,10 @@ export function Navigation() {
           <nav className="flex items-center justify-between flex-wrap gap-2 ">
             <Link href="/">Главная</Link>
             <Link href="/about">О нас</Link>
-            <Link href="/contacts">Контакты</Link>
-            <Link href="/faq">FAQ</Link>
-            <Link href="/catalog">Каталог</Link>
-            <Link href="/blog">Блог</Link>
+            <Link href="/">Контакты</Link>
+            <Link href="/">FAQ</Link>
+            <Link href="/">Каталог</Link>
+            <Link href="/">Блог</Link>
           </nav>
         </AppContainer>
       </div>
