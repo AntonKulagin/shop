@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { LogoType } from "../../_types";
 import Link from "next/link";
+import { LogoType } from "../../_types";
 
 export function LogoImage({ logo }: { logo: LogoType }) {
   return (
