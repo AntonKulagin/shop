@@ -1,9 +1,8 @@
 import { getLogos } from "../../_repository";
-import { LogoType } from "../../_types";
 import { LogoImage } from "./_logo-image";
 
 export async function Logo() {
-  const logos: LogoType[] = await getLogos();
+  const logos = await getLogos();
 
   const logo = logos.find((item) => item.title === "logo");
   const logoMini = logos.find((item) => item.title === "logo-mini");

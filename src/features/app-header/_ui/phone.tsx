@@ -1,10 +1,9 @@
 import { formatPhoneNumber } from "@/shared/lib/formatPhoneNumber";
 import { getPhone } from "../_repository";
-import { PhoneType } from "../_types";
 import { Phone as PhoneIcon } from "lucide-react";
 
 export async function Phone() {
-  const { phone }: PhoneType = await getPhone();
+  const { phone } = await getPhone();
   const formattedPhone = formatPhoneNumber(phone);
 
   return (

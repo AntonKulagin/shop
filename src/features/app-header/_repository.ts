@@ -1,9 +1,29 @@
 import { cmsProvider } from "@/shared/api/cms.provider";
+import { z } from "zod";
+
+const logosSchema = z
+  .object({
+    id: z.number(),
+    title: z.string(),
+    image: z.object({
+      id: z.number(),
+      name: z.string(),
+      url: z.string(),
+    }),
+  })
+  .array();
+
+const phoneSchema = z.object({
+  id: z.number(),
+  phone: z.string(),
+});
 
 export async function getLogos() {
-  return await cmsProvider.get("/api/logos?populate=*");
+  const logos = await cmsProvider.get("/api/logos?populate=*");
+  return logosSchema.parse(logos);
 }
 
 export async function getPhone() {
-  return await cmsProvider.get("/api/phone");
+  const phone = await cmsProvider.get("/api/phone?populate=*");
+  return phoneSchema.parse(phone);
 }
