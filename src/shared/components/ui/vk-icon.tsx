@@ -17,8 +17,8 @@ export function VkIcon(props: React.SVGProps<SVGSVGElement>) {
         y2="40.865"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#33bef0"></stop>
-        <stop offset="1" stop-color="#0a85d9"></stop>
+        <stop offset="0" stopColor="#33bef0"></stop>
+        <stop offset="1" stopColor="#0a85d9"></stop>
       </linearGradient>
       <path
         fill="url(#Byy22pnmlYaI5cW_~l8WCa_6P1pA3HJabYU_gr1)"

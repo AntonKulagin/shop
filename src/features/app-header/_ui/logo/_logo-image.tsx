@@ -1,18 +1,29 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { LogoType } from "../../_types";
+import Image from "next/image";
 
-export function LogoImage({ logo }: { logo: LogoType }) {
+export function LogoImage({
+  logo,
+  width,
+  height,
+}: {
+  logo: LogoType;
+  width: number;
+  height: number;
+}) {
   return (
-    <Link href={"/"} className="absolute w-full h-full left-0 top-0">
-      <Image
-        src={logo.image.url}
-        className="absolute w-full h-full left-0 top-0 object-cover"
-        fill
-        alt={`${logo.title}`}
-      />
-    </Link>
+    <div className="relative" style={{ width, height }}>
+      <Link href="/" className="relative">
+        <Image
+          src={logo.image.url}
+          alt={logo.title}
+          width={logo.image.width}
+          height={logo.image.height}
+          className="object-contain"
+        />
+      </Link>
+    </div>
   );
 }

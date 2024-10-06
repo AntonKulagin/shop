@@ -9,6 +9,8 @@ const logosSchema = z
       id: z.number(),
       name: z.string(),
       url: z.string(),
+      width: z.number(),
+      height: z.number(),
     }),
   })
   .array();
